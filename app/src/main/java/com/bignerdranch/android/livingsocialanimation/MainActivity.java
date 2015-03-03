@@ -18,8 +18,20 @@ public class MainActivity extends ActionBarActivity {
 
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
         mViewPager.setAdapter(new CustomPagerAdapter(getSupportFragmentManager()));
+        mViewPager.setOnPageChangeListener(new CustomOnPageChangeListener());
         mSlidingTabLayout = (SlidingTabLayout) findViewById(R.id.tabs);
         mSlidingTabLayout.setViewPager(mViewPager);
+    }
+
+    private class CustomOnPageChangeListener extends ViewPager.SimpleOnPageChangeListener {
+        @Override
+        public void onPageSelected(int position) {
+            if (position == CustomPagerAdapter.POSITION_FRAGMENT_ANIMATION) {
+                AnimationFragment fragment = (AnimationFragment) mViewPager.getAdapter().instantiateItem(mViewPager, 1);
+                fragment.startAnimation();
+            }
+            super.onPageSelected(position);
+        }
     }
 
 }

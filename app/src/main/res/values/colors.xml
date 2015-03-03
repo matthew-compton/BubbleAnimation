@@ -10,9 +10,9 @@
     <color name="text">#FFFFFF</color>
 
     <!-- Circles -->
-    <color name="circle_blue">#880000FF</color>
-    <color name="circle_orange">#88FFE18F</color>
-    <color name="circle_pink">#88FF00FF</color>
-    <color name="circle_yellow">#88FFFF00</color>
+    <color name="circle_blue">#DD00BBBB</color>
+    <color name="circle_orange">#DDDDBB55</color>
+    <color name="circle_pink">#DDFF00FF</color>
+    <color name="circle_yellow">#DDDDDD00</color>
 
 </resources>

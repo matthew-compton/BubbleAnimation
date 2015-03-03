@@ -26,4 +26,15 @@ public class AnimationFragment extends Fragment {
         return view;
     }
 
+    public void startAnimation() {
+        startAnimation(mCircleBlue);
+        startAnimation(mCircleOrange);
+        startAnimation(mCirclePink);
+        startAnimation(mCircleYellow);
+    }
+
+    private void startAnimation(View view) {
+        view.setVisibility(View.VISIBLE);
+    }
+
 }

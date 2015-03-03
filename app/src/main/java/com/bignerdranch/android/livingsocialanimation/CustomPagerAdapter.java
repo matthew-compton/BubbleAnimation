@@ -6,7 +6,9 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 public class CustomPagerAdapter extends FragmentPagerAdapter {
 
-    public static int COUNT = 2;
+    public static final int COUNT = 2;
+    public static final int POSITION_FRAGMENT_IMAGE = 0;
+    public static final int POSITION_FRAGMENT_ANIMATION = 1;
 
     public CustomPagerAdapter(FragmentManager fragmentManager) {
         super(fragmentManager);
