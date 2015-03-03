@@ -5,12 +5,19 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.ImageView;
+
+import butterknife.InjectView;
 
 public class AnimationFragment extends Fragment {
 
-    public static ImageFragment newInstance() {
-        return new ImageFragment();
+    @InjectView(R.id.fragment_animation_circle_blue) ImageView mCircleBlue;
+    @InjectView(R.id.fragment_animation_circle_orange) ImageView mCircleOrange;
+    @InjectView(R.id.fragment_animation_circle_pink) ImageView mCirclePink;
+    @InjectView(R.id.fragment_animation_circle_yellow) ImageView mCircleYellow;
+
+    public static AnimationFragment newInstance() {
+        return new AnimationFragment();
     }
 
     @Override

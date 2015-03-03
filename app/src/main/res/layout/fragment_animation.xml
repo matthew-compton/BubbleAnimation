@@ -6,9 +6,43 @@
              tools:context=".AnimationFragment">
 
     <ImageView
-        android:layout_width="match_parent"
+        android:id="@+id/fragment_animation_circle_blue"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/image"
+        android:src="@drawable/circle_blue"
+        android:visibility="gone"
+        tools:visibility="visible"
+        tools:layout_gravity="center"
+        />
+
+    <ImageView
+        android:id="@+id/fragment_animation_circle_orange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/circle_orange"
+        android:visibility="gone"
+        tools:visibility="visible"
+        tools:layout_gravity="bottom|center_horizontal"
+        />
+
+    <ImageView
+        android:id="@+id/fragment_animation_circle_pink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/circle_pink"
+        android:visibility="gone"
+        tools:visibility="visible"
+        tools:layout_gravity="left"
+        />
+
+    <ImageView
+        android:id="@+id/fragment_animation_circle_yellow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/circle_yellow"
+        android:visibility="gone"
+        tools:visibility="visible"
+        tools:layout_gravity="right"
         />
 
 </FrameLayout>
