@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context=".AnimationFragment">
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:clickable="true"
+              android:id="@+id/fragment_animation_layout"
+              tools:context=".AnimationFragment">
 
     <ImageView
         android:id="@+id/fragment_animation_circle_blue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/circle_blue"
-        android:visibility="gone"
+        android:visibility="invisible"
         tools:visibility="visible"
-        tools:layout_gravity="center"
         />
 
     <ImageView
@@ -20,9 +22,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/circle_orange"
-        android:visibility="gone"
+        android:visibility="invisible"
         tools:visibility="visible"
-        tools:layout_gravity="bottom|center_horizontal"
         />
 
     <ImageView
@@ -30,9 +31,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/circle_pink"
-        android:visibility="gone"
+        android:visibility="invisible"
         tools:visibility="visible"
-        tools:layout_gravity="left"
         />
 
     <ImageView
@@ -40,9 +40,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/circle_yellow"
-        android:visibility="gone"
+        android:visibility="invisible"
         tools:visibility="visible"
-        tools:layout_gravity="right"
         />
 
 </FrameLayout>

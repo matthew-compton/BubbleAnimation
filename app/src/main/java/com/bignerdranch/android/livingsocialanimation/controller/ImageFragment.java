@@ -1,10 +1,12 @@
-package com.bignerdranch.android.livingsocialanimation;
+package com.bignerdranch.android.livingsocialanimation.controller;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.bignerdranch.android.livingsocialanimation.R;
 
 public class ImageFragment extends Fragment {
 

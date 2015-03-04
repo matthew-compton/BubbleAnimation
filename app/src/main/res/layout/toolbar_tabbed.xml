@@ -4,16 +4,18 @@
     android:id="@+id/toolbar_tabbed"
     android:layout_height="?attr/actionBarSize"
     android:layout_width="match_parent"
+    android:paddingRight="16dp"
     android:background="?attr/colorPrimary">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.bignerdranch.android.livingsocialanimation.tabs.SlidingTabLayout
+        <com.bignerdranch.android.livingsocialanimation.views.SlidingTabLayout
             android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             />
 
     </LinearLayout>

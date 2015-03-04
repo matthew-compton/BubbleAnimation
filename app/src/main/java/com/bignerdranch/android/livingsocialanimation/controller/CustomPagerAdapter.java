@@ -1,4 +1,4 @@
-package com.bignerdranch.android.livingsocialanimation;
+package com.bignerdranch.android.livingsocialanimation.controller;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
