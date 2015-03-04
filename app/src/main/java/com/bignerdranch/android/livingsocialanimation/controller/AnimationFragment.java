@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.bignerdranch.android.livingsocialanimation.R;
+import com.bignerdranch.android.livingsocialanimation.model.AnimationState;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -23,13 +24,6 @@ public class AnimationFragment extends Fragment {
     @InjectView(R.id.fragment_animation_circle_yellow) ImageView mCircleYellow;
 
     private AnimationState mState;
-
-    private enum AnimationState {
-        HIDING,
-        ENTERING,
-        SHOWING,
-        EXITING
-    }
 
     public static AnimationFragment newInstance() {
         return new AnimationFragment();
