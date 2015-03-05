@@ -9,7 +9,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:src="@drawable/image"
+        android:src="@drawable/icon_living_social"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="20dp"
+        android:src="@drawable/text_living_social"
+        android:adjustViewBounds="true"
         />
 
 </FrameLayout>

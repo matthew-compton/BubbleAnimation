@@ -48,4 +48,16 @@
         tools:visibility="visible"
         />
 
+    <ImageView
+        android:id="@+id/fragment_animation_image_view_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="20dp"
+        android:src="@drawable/text_living_social"
+        android:adjustViewBounds="true"
+        android:visibility="invisible"
+        tools:visibility="visible"
+        />
+
 </FrameLayout>

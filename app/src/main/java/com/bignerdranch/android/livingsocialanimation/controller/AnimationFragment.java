@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AccelerateInterpolator;
+import android.view.animation.AnimationUtils;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -33,6 +34,7 @@ public class AnimationFragment extends Fragment {
     @InjectView(R.id.fragment_animation_circle_orange) ImageView mCircleOrange;
     @InjectView(R.id.fragment_animation_circle_pink) ImageView mCirclePink;
     @InjectView(R.id.fragment_animation_circle_yellow) ImageView mCircleYellow;
+    @InjectView(R.id.fragment_animation_image_view_text) ImageView mTextImageView;
 
     private AnimationState mState;
 
@@ -76,6 +78,7 @@ public class AnimationFragment extends Fragment {
         mState = AnimationState.ENTERING;
         int width = mLayout.getWidth();
         int height = mLayout.getHeight();
+
         ArcAnimator arcAnimatorBlue = createEnterAnimationOnView(
                 mCircleBlue,
                 (int) (width * .4),
@@ -109,7 +112,12 @@ public class AnimationFragment extends Fragment {
         arcAnimatorOrange.start();
         arcAnimatorPink.start();
         arcAnimatorYellow.start();
-        new Handler().postDelayed(() -> mState = AnimationState.SHOWING, DURATION_ANIMATION_MS);
+
+        new Handler().postDelayed(() -> {
+            mTextImageView.setVisibility(View.VISIBLE);
+            mTextImageView.startAnimation(AnimationUtils.loadAnimation(getActivity(), R.anim.text_enter));
+            new Handler().postDelayed(() -> mState = AnimationState.SHOWING, DURATION_ANIMATION_MS);
+        }, DURATION_ANIMATION_MS);
     }
 
     private ArcAnimator createEnterAnimationOnView(View view, int endX, int endY, int degrees, Side side) {
@@ -157,7 +165,13 @@ public class AnimationFragment extends Fragment {
         arcAnimatorOrange.start();
         arcAnimatorPink.start();
         arcAnimatorYellow.start();
-        new Handler().postDelayed(() -> mState = AnimationState.HIDING, DURATION_ANIMATION_MS);
+
+        mTextImageView.setVisibility(View.INVISIBLE);
+        mTextImageView.startAnimation(AnimationUtils.loadAnimation(getActivity(), R.anim.text_exit));
+
+        new Handler().postDelayed(() -> {
+            mState = AnimationState.HIDING;
+        }, DURATION_ANIMATION_MS);
     }
 
     private ArcAnimator createExitAnimationOnView(View view, int endX, int endY, int degrees, Side side) {
